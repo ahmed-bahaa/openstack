@@ -4,11 +4,11 @@ ANSWER_FILE='/root/answers.txt'
 
 #In the demo the interface on the system is eth0. Check the name of your interface
 #and set the variable here:
-INTERFACE=eth0
+INTERFACE=enp0s3
 
 #Make sure you set your own NTP Server or leave the following variable blank
-#NTP_SERVER=
-NTP_SERVER='192.168.0.3'
+NTP_SERVER=
+#NTP_SERVER='192.168.0.3'
 
 sed -i "s/^\(CONFIG_NTP_SERVERS\s*=\s*\).*\$/\1$NTP_SERVER/" $ANSWER_FILE
 sed -i "s/^\(CONFIG_DEFAULT_PASSWORD\s*=\s*\).*\$/\1Password1/" $ANSWER_FILE
